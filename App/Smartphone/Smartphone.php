@@ -1,7 +1,7 @@
 <?php
 
 abstract class Smartphone {
-    protected   $merk,
+    private     $merk,
                 $tipe,
                 $volume;
 
@@ -11,6 +11,18 @@ abstract class Smartphone {
         $this->tipe = $tipe;
         $this->volume = $volume;
         
+    }
+
+    public function getMerk() {
+        return $this->merk;
+    }
+
+    public function getTipe() {
+        return $this->tipe;
+    }
+
+    public function getVolume() {
+        return $this->volume;
     }
 
     public function nyalakan() {
@@ -27,7 +39,7 @@ abstract class Smartphone {
            
         if($str <= 5) {
 
-            return $str;
+            return "Volume Up ke ({$str})";
 
         }else{
 
@@ -43,7 +55,7 @@ abstract class Smartphone {
            
         if($str >= 0) {
 
-            return $str;
+            return "Volume Down ke ({$str})";
 
         }else{
 
@@ -52,7 +64,7 @@ abstract class Smartphone {
     }
 
     abstract public function UI();
-
+ 
     public function getter() {
         return "{$this->merk}, {$this->tipe}, {$this->volume}";
     }
