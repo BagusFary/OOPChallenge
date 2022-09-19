@@ -3,8 +3,8 @@
 class Xiaomi extends Smartphone implements Screenshot {
     protected $version;
 
-    public function getTipe() {
-        parent::getTipe();
+    public function __construct($tipe){
+        $this->tipe = $tipe;
     }
 
     public function UI() {

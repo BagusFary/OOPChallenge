@@ -1,16 +1,14 @@
 <?php
 
 abstract class Smartphone {
-    private     $merk,
+    protected   $merk,
                 $tipe,
                 $volume;
 
-    
-    public function __construct($merk = "merk", $tipe = "tipe", $volume = 0) {
-        $this->merk = $merk;
-        $this->tipe = $tipe;
+
+    public function __construct($volume = 0) 
+    {
         $this->volume = $volume;
-        
     }
 
     public function getMerk() {
@@ -35,7 +33,7 @@ abstract class Smartphone {
 
     public function volumeUp($volume) {
 
-        $str = $this->volume + $volume;
+        $str = $this->getVolume() + $volume;
            
         if($str <= 5) {
 
@@ -65,8 +63,8 @@ abstract class Smartphone {
 
     abstract public function UI();
  
-    public function getter() {
-        return "{$this->merk}, {$this->tipe}, {$this->volume}";
+    public function getInfoHape() {
+        return "{$this->merk} {$this->tipe}";
     }
 }
 
