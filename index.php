@@ -1,18 +1,26 @@
 <?php
 require_once 'App/init.php';
 
+// Tipe Produk
+$XiaomiNote9 = new Xiaomi("Xiaomi", "Note 9", 0);
+$XiaomiNote10 = new Xiaomi("Xiaomi", "Note 10", 0);
 
-$XiaomiNote9 = new Xiaomi('Note 9');
-echo $XiaomiNote9->getTipe();
+$SamsungGalaxy = new Samsung("Samsung", "Samsung Galaxy Z Flip4", 0);
 
-echo "<br>";
+$OppoRealme = new Oppo("Oppo", "Oppo Realme 9 Pro", 0);
 
-$hp1 = new Xiaomi("Xiaomi", "blackshark", 5);
-echo $hp1->nyalakan();
-echo "<br>";
-echo $hp1->volumeDown(0);
-echo "<br>";
-echo $hp1->volumeUp(0);
+
+
+//Daftar Produk
+$daftarHape = new App();
+$daftarHape->tambahTipe($XiaomiNote9);
+$daftarHape->tambahTipe($XiaomiNote10);
+$daftarHape->tambahTipe($SamsungGalaxy);
+$daftarHape->tambahTipe($OppoRealme);
+echo $daftarHape->cetak();
+
+
+
 
 
 

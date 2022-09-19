@@ -1,14 +1,14 @@
 <?php
 
 class Samsung extends Smartphone implements Screenshot {
-    protected $version;
+    protected $version,
+    $merk,
+    $volume;
 
-    // public function __construct() {
-    //     parent::__construct();
-    // }
-
-    public function getTipe() {
-        parent::getTipe();
+    public function __construct($merk = "merk", $tipe = "tipe", $volume = 0) {
+        parent::__construct($tipe);
+        $this->merk = $merk;
+        $this->volume = $volume;
     }
 
     public function UI() {

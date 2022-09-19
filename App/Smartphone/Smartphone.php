@@ -1,14 +1,10 @@
 <?php
 
 abstract class Smartphone {
-    protected   $merk,
-                $tipe,
-                $volume;
+    protected   $tipe;
 
-
-    public function __construct($volume = 0) 
-    {
-        $this->volume = $volume;
+    public function __construct($tipe) {
+        $this->tipe = $tipe;
     }
 
     public function getMerk() {
@@ -24,7 +20,7 @@ abstract class Smartphone {
     }
 
     public function nyalakan() {
-        return "Menyalakan {$this->merk} {$this->tipe}";
+        return "Menyalakan {$this->getInfoHape()} ";
     }
 
     public function matikan() {
@@ -49,7 +45,7 @@ abstract class Smartphone {
 
     public function volumeDown($volume) {
         
-        $str = $this->volume - $volume;
+        $str = $this->getVolume() - $volume;
            
         if($str >= 0) {
 
@@ -64,7 +60,7 @@ abstract class Smartphone {
     abstract public function UI();
  
     public function getInfoHape() {
-        return "{$this->merk} {$this->tipe}";
+        return "{$this->merk} {$this->getTipe()}";
     }
 }
 
