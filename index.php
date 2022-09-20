@@ -40,6 +40,8 @@ echo $OppoRealme->capture();
 echo "<br>";
 echo $OppoRealme->matikan();
 
+echo "<hr>";
+
 
 
 

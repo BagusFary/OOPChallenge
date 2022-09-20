@@ -57,7 +57,7 @@ abstract class Smartphone {
 
         }else{
 
-            echo "Minimal Volume 0!";
+            echo "Minimal Volume 0!!";
         }
     }
 

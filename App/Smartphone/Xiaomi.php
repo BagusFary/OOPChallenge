@@ -17,7 +17,7 @@ class Xiaomi extends Smartphone implements Screenshot {
     }
     
     public function capture() {
-        return "Tekan tombol power + volume down <br>";
+        return "Tekan tombol power + Volume down <br>";
     }
 
     public function setUIVersion($version) {
